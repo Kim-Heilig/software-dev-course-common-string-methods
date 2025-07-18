@@ -69,35 +69,57 @@ Complete the following tasks and assign the results to the specified variables. 
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
 // 1. Searching
-let hasJavaScript; // Your code here
-let codingPosition; // Your code here
-let startsWithWelcome; // Your code here
-let endsWithToday; // Your code here
+let hasJavaScript = inputString.includes("JavaScript"); // Your code here   - Check if the word "JavaScript" is in the string using includes and assign the result to a variable named hasJavaScript.
+
+let codingPosition = inputString.indexOf("Coding"); // Your code here    - Find the position of the word "Coding" in the string using indexOf and assign the result to a variable named codingPosition.
+
+let startsWithWelcome = inputString.trim().startsWith("Welcome"); // Your code here   - Check if the string starts with "Welcome" using startsWith and assign the result to a variable named startsWithWelcome.
+
+let endsWithToday = inputString.trim( ).endsWith("today."); // Your code here   - Check if the string ends with "today." using endsWith and assign the result to a variable named endsWithToday.
+
 
 // 2. Transforming
-let lowercaseString; // Your code here
-let uppercaseString; // Your code here
-let trimmedString; // Your code here
-let replacedString; // Your code here
+let lowercaseString = inputString.toLowerCase(); // Your code here   - Convert the string to all lowercase letters using toLowerCase and assign the result to a variable named lowercaseString.
+
+let uppercaseString = inputString.toUpperCase(); // Your code here  - Convert the string to all uppercase letters using toUpperCase and assign the result to a variable named uppercaseString.
+
+let trimmedString = inputString.trim(); // Your code here - Remove the extra spaces from the beginning and end of the string using trim and assign the result to a variable named trimmedString.
+
+let replacedString = inputString.replace("JavaScript", "coding"); // Your code here - Replace the word "JavaScript" with "coding" using replace and assign the result to a variable named replacedString.
 
 // 3. Breaking Apart
-let wordsArray; // Your code here
+let wordsArray = inputString.split(" "); // Your code here   - Split the string into an array of words using split with a space (" ") as the delimiter and assign the result to a variable named wordsArray.
 
 // 4. Retrieving
-let firstCharacter; // Your code here
-let extractedBootcamp; // Your code here
+let firstCharacter = trimmedString[0]; // Your code here   - Retrieve the first character of the trimmed string using charAt and assign the result to a variable named firstCharacter.
+let extractedBootcamp = inputString.slice(inputString.indexOf("Bootcamp"), inputString.indexOf("Bootcamp") + 8); // Your code here - Extract the word "Bootcamp" from the string using slice and assign the result to a variable named extractedBootcamp.
+
 
 // Log all results
-console.log({
-  hasJavaScript,
-  codingPosition,
-  startsWithWelcome,
-  endsWithToday,
-  lowercaseString,
-  uppercaseString,
-  trimmedString,
-  replacedString,
-  wordsArray,
-  firstCharacter,
-  extractedBootcamp,
-});
+console.log("+++++++ 1. Searching ++++++++");
+console.log("hasJavaScript: " + hasJavaScript);
+console.log("codingPosition: " + codingPosition);
+console.log("startsWithWelcome: " + startsWithWelcome);
+console.log("endsWithToday: " + endsWithToday);
+
+console.log("+++++++ 2. Transforming ++++++++");
+console.log("lowercaseString: " + lowercaseString);
+console.log("uppercaseString: " + uppercaseString);
+console.log("replacedString: " + replacedString);
+
+console.log("+++++++ 3. Breaking Apart ++++++++");
+console.log("wordsArray: " + wordsArray);
+
+console.log("+++++++ 4. Retrieving ++++++++");
+console.log("firstCharacter +: " + firstCharacter);
+console.log("extractedBootcamp +: " + extractedBootcamp);
+
+
+
+// console.log(" " + );
+
+
+  //   wordsArray +
+  //   firstCharacter +
+  //   extractedBootcamp
+
